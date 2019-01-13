@@ -1,6 +1,7 @@
 ---
 title: Prototyping Utilities
-description: Quickly prototype layouts and UI with Foundation's Prototyping Utilities. These optional classes and mixins are great realizing your sketches and mockups into hi-fi coded prototype's ultra fast.
+description: Quickly prototype layouts and UI with Foundation's Prototyping Utilities. These optional classes and mixins are great for quickly turning sketches and mockups into coded prototypes.
+video: Xhc_KUJMEuk
 sass:
   - scss/prototype/*.scss
 ---
@@ -111,6 +112,10 @@ These `.radius`, `.rounded`, `.bordered` & `.shadow` classes can be used indepen
 	**Sass Tip**: You can use [Shadow](#shadow) mixin to create something like `shadow-hover-focus`. [Codepen example](http://codepen.io/IamManchanda/pen/XMRMwo)
 </div>
 
+<p>
+  <a class="" data-open-video="1:06"><img src="{{root}}assets/img/icons/watch-video-icon.svg" class="video-icon" height="30" width="30" alt=""> Watch this part in video</a>
+</p>
+
 #### Buttons
 
 ```html_example
@@ -119,6 +124,19 @@ These `.radius`, `.rounded`, `.bordered` & `.shadow` classes can be used indepen
 <button type="button" class="button radius bordered shadow success">Success</button>
 <button type="button" class="button rounded bordered shadow alert">Alert</button>
 <button type="button" class="button radius bordered shadow warning">Warning</button>
+```
+
+#### Switches
+
+Add the `.rounded` class to `.switch` to make it rounded.
+
+```html_example
+<div class="switch rounded">
+  <input class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch">
+  <label class="switch-paddle" for="exampleSwitch">
+    <span class="show-for-sr">Download Kittens</span>
+  </label>
+</div>
 ```
 
 #### Cards
@@ -137,8 +155,8 @@ These `.radius`, `.rounded`, `.bordered` & `.shadow` classes can be used indepen
 ```
 
 <div class="docs-code-live">
-	<div class="row">
-		<div class="medium-4 columns">
+	<div class="grid-x grid-margin-x">
+		<div class="cell medium-4">
 			<div class="radius bordered shadow card">
 			  <img src="assets/img/generic/rectangle-1.jpg">
 			  <div class="card-divider">
@@ -150,7 +168,7 @@ These `.radius`, `.rounded`, `.bordered` & `.shadow` classes can be used indepen
 			  </div>
 			</div>
 		</div>
-		<div class="medium-4 columns">
+		<div class="cell medium-4">
 			<div class="radius bordered shadow card">
 			  <img src="assets/img/generic/rectangle-1.jpg">
 			  <div class="card-divider">
@@ -162,7 +180,7 @@ These `.radius`, `.rounded`, `.bordered` & `.shadow` classes can be used indepen
 			  </div>
 			</div>
 		</div>
-		<div class="medium-4 columns">
+		<div class="cell medium-4">
 			<div class="radius bordered shadow card">
 			  <img src="assets/img/generic/rectangle-1.jpg">
 			  <div class="card-divider">
@@ -269,14 +287,14 @@ This creates a tiny separator below the heading of an element and is usually use
 ```
 
 <div class="docs-code-live">
-	<div class="row">
-		<div class="small-12 medium-4 columns">
+	<div class="grid-x grid-margin-x">
+		<div class="cell small-12 medium-4">
 			<h3 class="separator-left">Lorem</h3>
 		</div>
-		<div class="small-12 medium-4 columns">
+		<div class="cell small-12 medium-4">
 			<h3 class="separator-center">Ipsum Dolor</h3>
 		</div>
-		<div class="small-12 medium-4 columns">
+		<div class="cell small-12 medium-4">
 			<h3 class="separator-right">Tempor</h3>
 		</div>
 	</div>
@@ -300,13 +318,13 @@ You can use font styling to style your text. You can change the font styling by 
 ## List Styling
 
 <div class="primary callout">
-	Please note that [Unbulleted lists](typography-helpers.html#un-bulleted-list), `.no-bullets` is enabled by default for both ordered and unordered lists.
+	Please note that [Unbulleted lists](typography-helpers.html#un-bulleted-list), `.no-bullet` is enabled by default for both ordered and unordered lists.
 </div>
 
 #### Unordered Lists
 
 ```html
-<ul class="no-bullets"></ul>
+<ul class="no-bullet"></ul>
 <ul class="list-disc"></ul>
 <ul class="list-circle"></ul>
 <ul class="list-square"></ul>
@@ -315,7 +333,7 @@ You can use font styling to style your text. You can change the font styling by 
 #### Ordered Lists
 
 ```html
-<ol class="no-bullets"></ol>
+<ol class="no-bullet"></ol>
 <ol class="list-decimal"></ol>
 <ol class="list-lower-alpha"></ol>
 <ol class="list-lower-latin"></ol>
@@ -415,6 +433,10 @@ Generate spacing around elements with these easy to use margin classes.
 <div class="primary callout">
 	Please note that here below, `1 = 1 * $global-margin` and so on. By default `$global-margin` is equal to `1rem` which you can easily customize through [Sass Variables](#sass-variables).
 </div>
+
+<p>
+  <a class="" data-open-video="1:28"><img src="{{root}}assets/img/icons/watch-video-icon.svg" class="video-icon" height="30" width="30" alt=""> Watch this part in video</a>
+</p>
 
 #### Margin (All Sides)
 
@@ -805,4 +827,3 @@ These relational mixins helps you to manage styling of :nth-child’ified elemen
 @include odd-between($first, $last) {} // applies style to all odd children except first and last
 @include number-between($num, $first, $last) {} // applies style to every n children from first child and last child
 ```
-
